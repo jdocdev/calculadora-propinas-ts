@@ -7,9 +7,9 @@ const tipOptions = [
         label: '10%'
     },
     {
-        id: 'tip-20',
-        value: .20,
-        label: '20%'
+        id: 'tip-30',
+        value: .30,
+        label: '30%'
     },
     {
         id: 'tip-50',
@@ -29,16 +29,23 @@ export default function TipPercentageForm({ setTip, tip }: TipPercentageFormProp
             <h3 className="font-bold text-2xl">Propina:</h3>
             <form>
                 {tipOptions.map(tipOption => (
-                    <div key={tipOption.id} className="flex gap-2">
-                        <label htmlFor={tipOption.id}>{tipOption.label}</label>
-                        <input
-                            id={tipOption.id}
-                            type="radio"
-                            name="tip"
-                            value={tipOption.value}
-                            onChange={e => setTip(+e.target.value)}
-                            checked={tipOption.value === tip}
-                        />
+                    <div key={tipOption.id} className="flex items-center gap-2">
+                        <label htmlFor={tipOption.id} className="flex items-center cursor-pointer">
+                            <i
+                                className={`bi ${tipOption.value === tip ? 'bi-star-fill text-yellow-500' : 'bi-star text-gray-400'}`}
+                                style={{ fontSize: '1.5rem' }}
+                            ></i>
+                            <span className="ml-2">{tipOption.label}</span>
+                            <input
+                                id={tipOption.id}
+                                type="radio"
+                                name="tip"
+                                value={tipOption.value}
+                                onChange={e => setTip(+e.target.value)}
+                                checked={tipOption.value === tip}
+                                className="sr-only"
+                            />
+                        </label>
                     </div>
                 ))}
             </form>

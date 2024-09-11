@@ -28,11 +28,12 @@ export default function OrderTotals({ order, tip, placeOrder }: OrderTotalsProps
                 </p>
             </div>
             <button
-                className="w-full bg-black p-3 uppercase text-white font-bold mt-10 disabled:opacity-10"
+                className="w-full bg-gray-600 hover:bg-starbucks-color transition-all rounded-lg  p-3 uppercase text-white font-bold mt-10 disabled:opacity-10"
                 disabled={totalAmount === 0}
                 onClick={placeOrder}
             >
-                Guardar Orden
+                Tomar pedido
+                <i className="pl-2 bi bi-bag-heart-fill text-xl"></i>
             </button>
         </>
     )

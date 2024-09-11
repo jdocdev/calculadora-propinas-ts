@@ -5,7 +5,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'starbucks-color': '#1E3932',
+      }
+    },
   },
   plugins: [],
 }

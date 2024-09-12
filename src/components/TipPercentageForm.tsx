@@ -7,14 +7,14 @@ const tipOptions = [
         label: '10%'
     },
     {
-        id: 'tip-30',
-        value: .30,
-        label: '30%'
+        id: 'tip-15',
+        value: .15,
+        label: '15%'
     },
     {
-        id: 'tip-50',
-        value: .50,
-        label: '50%'
+        id: 'tip-20',
+        value: .20,
+        label: '20%'
     },
 ]
 
